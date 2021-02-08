@@ -21,6 +21,7 @@ namespace Sweepstakes
         public Sweepstakes(string name)
         {
             this.name = name;
+            contestants = new Dictionary<int, Contestant>();
         }
 
         //Member Methods
@@ -36,7 +37,7 @@ namespace Sweepstakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            
         }
     }
 }
