@@ -27,7 +27,10 @@ namespace Sweepstakes
         //Member Methods
         public void RegisterContestant(Contestant contestant)
         {
-
+            contestant.FirstName = UserInterface.GetUserInputFor("What is your first name?");
+            contestant.LastName = UserInterface.GetUserInputFor("What is your last name?");
+            contestant.EmailAddress = UserInterface.GetUserInputFor("What is your email address?");
+            contestant.RegistrationNumber = contestants.Count;
         }
 
         public Contestant PickWinner()
