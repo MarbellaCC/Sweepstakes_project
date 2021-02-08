@@ -11,15 +11,21 @@ namespace Sweepstakes
         //Member Variables
         private Stack<Sweepstakes> stack;
 
+        //Constructor
+        public SweepstakesStackManager()
+        {
+            stack = new Stack<Sweepstakes>();
+        }
+
         //Member Methods
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            stack.Push(sweepstakes);
         }
 
         public Sweepstakes GetSweepstakes()
         {
-
+            return stack.Pop();
         }
     }
 }
