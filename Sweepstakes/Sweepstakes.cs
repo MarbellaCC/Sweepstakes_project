@@ -33,12 +33,28 @@ namespace Sweepstakes
 
         public Contestant PickWinner()
         {
+            Random random = new Random();
+            int randomKey = random.Next(0, contestants.Count);
 
+            foreach(KeyValuePair<int, Contestant> contestant in contestants)
+            {
+                if(randomKey == contestant.Key)
+                {
+                    return contestant.Value;
+                }
+            }
+            return null;
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            
+            foreach(KeyValuePair<int, Contestant> theContestant in contestants)
+            {
+                if(contestant == theContestant.Value)
+                {
+                    Console.WriteLine(theContestant.Key + " " + theContestant.Value);
+                }
+            }
         }
     }
 }
