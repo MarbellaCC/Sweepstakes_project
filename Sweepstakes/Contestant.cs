@@ -9,27 +9,16 @@ namespace Sweepstakes
     public class Contestant
     {
         //Member Variables
-        public string FirstName
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public int RegistrationNumber { get; set; }
+       
+        public Contestant()
         {
-            get => FirstName;
-            set => FirstName = value;
-        }
-        public string LastName
-        {
-            get => LastName;
-            set => LastName = value;
-        }
-
-        public string EmailAddress
-        {
-            get => EmailAddress;
-            set => EmailAddress = value;
-        }
-
-        public int RegistrationNumber
-        {
-            get => RegistrationNumber;
-            set => RegistrationNumber = value;
+            FirstName = UserInterface.GetUserInputFor("What is your first name?");
+            LastName = UserInterface.GetUserInputFor("What is your last name?");
+            EmailAddress = UserInterface.GetUserInputFor("What is your email address?");
         }
     }
 }
