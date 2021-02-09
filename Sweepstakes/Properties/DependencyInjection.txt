@@ -1,0 +1,5 @@
+﻿Dependency Injection
+
+Dependency injection is happening in the MarketingFirm class. The type of manager that runs the sweepstakes can be Queue 
+or Stack. The benefit of this is the MarketingFirm class doesnt depend on a single class. It now depends on the interface,
+ISweepstakesManager, making it more flexible. 
