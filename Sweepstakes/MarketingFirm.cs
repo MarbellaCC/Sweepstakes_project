@@ -15,11 +15,14 @@ namespace Sweepstakes
         public MarketingFirm(ISweepstakesManager manager)
         {
             this.manager = manager;
+            
         }
 
         //Member Methods
         public void CreateSweepstakes()
         {
+            string sweepstakesName = UserInterface.GetUserInputFor("Whats your sweepstakes name?");
+            Sweepstakes sweepstakes = new Sweepstakes(sweepstakesName);
 
         }
     }
